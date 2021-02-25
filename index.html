@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Random User Generator</title>
+</head>
+
+<body>
+    <div v-cloak id="app">
+        <div v-cloak>
+            <img v-bind:src="picture" :alt="`${firstName} ${lastName}`" :class="gender" />
+            <h1>{{title}} {{firstName}} {{lastName}}</h1>
+            <h3>Email: {{email}}</h3>
+            <p>Dob: {{dob}}</p>
+            <p>Nationality: {{nationality}}</p>
+            <button :class="gender" @click="getUser()">Get Random User</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+    <script src="moment.js"></script>
+
+</body>
+
+</html>
